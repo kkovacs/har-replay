@@ -13,11 +13,11 @@ Installation
 Usage
 =====
 
-Usage: main.js [options]
+	Usage: main.js [options]
 
-Options:
+	Options:
 
--h, --help         output usage information
--s, --site <site>  only fire requests that are for this domain (ignore everything else)
--f, --file <file>  HAR file to replay
+	-h, --help         output usage information
+	-s, --site <site>  only fire requests that are for this domain (ignore everything else)
+	-f, --file <file>  HAR file to replay
 
