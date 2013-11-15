@@ -7,8 +7,9 @@ Installation
 ============
 
 	git clone https://github.com/kkovacs/har-replay
+	cd har-replay
 	npm update
-	node main.js <filename.har>
+	./main.js -f <filename.har>
 
 Usage
 =====
