@@ -1,0 +1,16 @@
+{
+  "name": "har-replay",
+  "description": "Tool to replay HTTP Archive (HAR) files for testing purposes",
+  "author": "Kristof Kovacs <kkovacs@kkovacs.eu>",
+  "dependencies": {
+    "underscore.string": "2.3.x",
+    "underscore": "1.x.x",
+    "request": "2.27.x",
+    "moment": "2.4.x",
+    "commander": "2.0.x"
+  },
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "engine": "node >= 0.10.0"
+}
