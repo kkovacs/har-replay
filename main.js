@@ -46,12 +46,18 @@ fs.readFile(commander.file, function(err, data) {
 				method: entry.request.method,
 				// reformat headers from HAR format to a dict
 				headers: _.reduce(entry.request.headers, function(memo, e) {
-					memo[e['name']] = e['value'];
+					if(e['name'][0] != ':')
+						memo[e['name']] = e['value'];
 					return memo;
 				}, {})
 			}, function(error, response, body) {
 				// Just print a status, drop the files as soon as possible
-				console.log(entry.request.url + " => " + response.statusCode);
+                                if(response) {
+					console.log(entry.request.url + " => " + response.statusCode);
+                                } else {
+					// Likely failed because it was a websocket
+					console.log(entry.request.url + " => 0");
+                                }
 			});
 
 			// Garbage collect, if we can (if started with --expose-gc)
